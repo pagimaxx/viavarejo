@@ -12,7 +12,7 @@ using System.Text;
 
 namespace ViaVarejo.AppService.Service
 {
-    public class ItemPedidoAppService : IItemPedidoService
+    public class ItemPedidoAppService : IItemPedidoAppService
     {
         private readonly IItemPedidoService _service;
 
@@ -25,43 +25,33 @@ namespace ViaVarejo.AppService.Service
             _service = service;
         }
 
-        public bool Atualizar(ItemPedido vm)
+        public string Atualizar(ItemPedidoAlteracaoVM vm, int idUsuario)
         {
             var cb = MapperUtils.Map<ItemPedidoAlteracaoVM, ItemPedido>(vm);
             cb.IdUsuarioAlteracao = 1;
             return _service.Atualizar(cb).ToString();
         }
 
-        public int Cadastrar(ItemPedido vm)
+        public string Cadastrar(ItemPedidoInclusaoVM vm, int idUsuario)
         {
             var cb = MapperUtils.Map<ItemPedidoInclusaoVM, ItemPedido>(vm);
             cb.IdUsuarioCadastro = 1;
             return _service.Cadastrar(cb).ToString();
         }
 
-        public IEnumerable<ItemPedido> ObterPorIdPedido(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<ItemPedidoConsultaVM> ObterPorIdPedido(int id) =>
+            MapperUtils.MapList<ItemPedido, ItemPedidoConsultaVM>(_service.ObterPorIdPedido(id));
 
-        public IEnumerable<ItemPedido> ObterPorIdProduto(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<ItemPedidoConsultaVM> ObterPorIdProduto(int id) =>
+            MapperUtils.MapList<ItemPedido, ItemPedidoConsultaVM>(_service.ObterPorIdProduto(id));
 
-        public IEnumerable<ItemPedido> ObterPorPrecoVenda(double valor1, double valor2)
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<ItemPedidoConsultaVM> ObterPorPrecoVenda(double valor1, double valor2) =>
+            MapperUtils.MapList<ItemPedido, ItemPedidoConsultaVM>(_service.ObterPorPrecoVenda(valor1, valor2));
 
-        public IEnumerable<ItemPedido> ObterTodos()
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<ItemPedidoConsultaVM> ObterTodos() =>
+            MapperUtils.MapList<ItemPedido, ItemPedidoConsultaVM>(_service.ObterTodos());
 
-        public bool Remover(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public bool Remover(int id) =>
+            _service.Remover(id);
     }
 }

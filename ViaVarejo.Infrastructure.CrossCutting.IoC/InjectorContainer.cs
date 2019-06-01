@@ -18,6 +18,8 @@ namespace Wevo.Infrastructure.CrossCutting.IoC
             interfaceService.AddScoped(typeof(IStatusPedidoAppService), typeof(StatusPedidoAppService));
             interfaceService.AddScoped(typeof(IProdutoAppService), typeof(ProdutoAppService));
             interfaceService.AddScoped(typeof(IPedidoAppService), typeof(PedidoAppService));
+            interfaceService.AddScoped(typeof(IItemPedidoAppService), typeof(ItemPedidoAppService));
+            interfaceService.AddScoped(typeof(IHistoricoStatusAppService), typeof(HistoricoStatusAppService));
 
             #endregion
 
@@ -26,6 +28,8 @@ namespace Wevo.Infrastructure.CrossCutting.IoC
             interfaceService.AddScoped(typeof(IStatusPedidoService), typeof(StatusPedidoService));
             interfaceService.AddScoped(typeof(IProdutoService), typeof(ProdutoService));
             interfaceService.AddScoped(typeof(IPedidoService), typeof(PedidoService));
+            interfaceService.AddScoped(typeof(IItemPedidoService), typeof(ItemPedidoService));
+            interfaceService.AddScoped(typeof(IHistoricoStatusService), typeof(HistoricoStatusService));
 
             #endregion
 
@@ -34,6 +38,8 @@ namespace Wevo.Infrastructure.CrossCutting.IoC
             interfaceService.AddScoped(typeof(IStatusPedidoRepository), typeof(StatusPedidoRepository));
             interfaceService.AddScoped(typeof(IProdutoRepository), typeof(ProdutoRepository));
             interfaceService.AddScoped(typeof(IPedidoRepository), typeof(PedidoRepository));
+            interfaceService.AddScoped(typeof(IItemPedidoRepository), typeof(ItemPedidoRepository));
+            interfaceService.AddScoped(typeof(IHistoricoStatusRepository), typeof(HistoricoStatusRepository));
             interfaceService.AddScoped(typeof(IConnectionDB), typeof(ConnectionDB));
 
             #endregion

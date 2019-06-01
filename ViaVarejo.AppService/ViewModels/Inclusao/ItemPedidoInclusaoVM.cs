@@ -22,5 +22,11 @@ namespace ViaVarejo.AppService.ViewModels.Inclusao
         /// </summary>
         [Display(Name = "Preço da Venda")]
         public double PrecoVenda { get; set; }
+
+        /// <summary>
+        /// Produto
+        /// </summary>
+        [Display(Name = "Produto")]
+        public Produto Produto { get; set; }
     }
 }

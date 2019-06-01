@@ -84,7 +84,7 @@ namespace ViaVarejo.Persistence.Repositories
                     (itemPedido, produto) => {
                         itemPedido.Produto = produto;
                         return itemPedido;
-                    }, DataBaseType, parametro, splitOn: "IdPedido").ToList();
+                    }, DataBaseType, parametro, splitOn: "IdProduto").ToList();
             }
             catch (Exception ex)
             {

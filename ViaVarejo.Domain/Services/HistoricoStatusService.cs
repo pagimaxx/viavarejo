@@ -8,28 +8,16 @@ using ViaVarejo.Domain.Interfaces.Services;
 
 namespace ViaVarejo.Domain.Services
 {
-    public class ItemPedidoService : IItemPedidoService
+    public class HistoricoStatusService : IHistoricoStatusService
     {
-        private readonly IItemPedidoRepository _repository;
+        private readonly IHistoricoStatusRepository _repository;
 
-        public ItemPedidoService(IItemPedidoRepository repository)
+        public HistoricoStatusService(IHistoricoStatusRepository repository)
         {
             _repository = repository;
         }
 
-        public IEnumerable<ItemPedido> ObterTodos() =>
-            _repository.ObterTodos();
-
-        public IEnumerable<ItemPedido> ObterPorIdPedido(int id) =>
-            _repository.ObterPorIdPedido(id);
-
-        public IEnumerable<ItemPedido> ObterPorIdProduto(int id) => 
-            _repository.ObterPorIdProduto(id);
-
-        public IEnumerable<ItemPedido> ObterPorPrecoVenda(double valor1, double valor2) =>
-            _repository.ObterPorPrecoVenda(valor1, valor2);
-
-        public bool Atualizar(ItemPedido entity)
+        public bool Atualizar(HistoricoStatus entity)
         {
             using (var scope = new TransactionScope())
             {
@@ -44,7 +32,7 @@ namespace ViaVarejo.Domain.Services
             }
         }
 
-        public int Cadastrar(ItemPedido entity)
+        public int Cadastrar(HistoricoStatus entity)
         {
             using (var scope = new TransactionScope())
             {
@@ -54,6 +42,18 @@ namespace ViaVarejo.Domain.Services
                 return identificador;
             }
         }
+
+        public IEnumerable<HistoricoStatus> ObterPorDataStatus(DateTime dtInicial, DateTime dtFinal) =>
+            _repository.ObterPorDataStatus(dtInicial, dtFinal);
+
+        public IEnumerable<HistoricoStatus> ObterPorIdPedido(int id) =>
+            _repository.ObterPorIdPedido(id);
+
+        public IEnumerable<HistoricoStatus> ObterPorIdStatus(int id) =>
+            _repository.ObterPorIdStatus(id);
+
+        public IEnumerable<HistoricoStatus> ObterTodos() =>
+            _repository.ObterTodos();
 
         public bool Remover(int id)
         {

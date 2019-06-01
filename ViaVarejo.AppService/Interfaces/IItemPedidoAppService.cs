@@ -8,7 +8,6 @@ namespace ViaVarejo.AppService.Interfaces
 {
     public interface IItemPedidoAppService
     {
-        ItemPedidoConsultaVM ObterPorId(int id);
         IEnumerable<ItemPedidoConsultaVM> ObterTodos();
         IEnumerable<ItemPedidoConsultaVM> ObterPorIdPedido(int id);
         IEnumerable<ItemPedidoConsultaVM> ObterPorIdProduto(int id);

@@ -8,8 +8,4 @@
     <ProjectReference Include="..\ViaVarejo.Infrastructure.CrossCutting\ViaVarejo.Infrastructure.CrossCutting.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
-
 </Project>
