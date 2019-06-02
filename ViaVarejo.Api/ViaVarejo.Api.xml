@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViaVarejo.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ViaVarejo.Api.Controllers.HistoricoStatusController">
+            <summary>
+            API Pedidos
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.#ctor(ViaVarejo.AppService.Interfaces.IHistoricoStatusAppService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="iAppService"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterTodos">
+            <summary>
+            Obtém a lista de todos registros
+            </summary>
+            <returns>Retorna a lista de todos registros</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterPorIdPedido(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por pedidos (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros pedido (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterPorIdStatus(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por preço da venda (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por preço da venda (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterPorDataStatus(System.DateTime,System.DateTime)">
+            <summary>
+            Obtém a lista de todos os registros por produto (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por previsao de entrega (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.Cadastrar(ViaVarejo.AppService.ViewModels.Inclusao.HistoricoStatusInclusaoVM,System.Int32)">
+            <summary>
+            Cadastrar Novo Registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Cadastrar novo registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.Atualizar(ViaVarejo.AppService.ViewModels.Alteracao.HistoricoStatusAlteracaoVM,System.Int32)">
+            <summary>
+            Atualizar registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Atualizar o registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.Remover(System.Int32)">
+            <summary>
+            Remover o registro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViaVarejo.Api.Controllers.ItemPedidoController">
+            <summary>
+            API Pedidos
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.#ctor(ViaVarejo.AppService.Interfaces.IItemPedidoAppService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="iAppService"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.ObterTodos">
+            <summary>
+            Obtém a lista de todos registros
+            </summary>
+            <returns>Retorna a lista de todos registros</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.ObterPorIdPedido(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por pedidos (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros pedido (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.ObterPorPrecoVenda(System.Double,System.Double)">
+            <summary>
+            Obtém a lista de todos os registros por preço da venda (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por preço da venda (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.ObterPorIdProduto(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por produto (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por previsao de entrega (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.Cadastrar(ViaVarejo.AppService.ViewModels.Inclusao.ItemPedidoInclusaoVM,System.Int32)">
+            <summary>
+            Cadastrar Novo Registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Cadastrar novo registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.Atualizar(ViaVarejo.AppService.ViewModels.Alteracao.ItemPedidoAlteracaoVM,System.Int32)">
+            <summary>
+            Atualizar registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Atualizar o registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ItemPedidoController.Remover(System.Int32)">
+            <summary>
+            Remover o registro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViaVarejo.Api.Controllers.PedidoController">
+            <summary>
+            API Pedidos
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.#ctor(ViaVarejo.AppService.Interfaces.IPedidoAppService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="iAppService"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.ObterPorId(System.Int32)">
+            <summary>
+            Obtém informações do Pedido
+            </summary>
+            <param name="idPedido">Código</param>
+            <returns>Informações do registro selecionado</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.ObterTodos">
+            <summary>
+            Obtém a lista de todos registros
+            </summary>
+            <returns>Retorna a lista de todos registros</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.ObterPorStatus(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por status (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por status (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.ObterPorValorPedido(System.Double,System.Double)">
+            <summary>
+            Obtém a lista de todos os registros por valor pedido (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por valor pedido (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.ObterPorDataPrevisaoEntrega(System.DateTime,System.DateTime)">
+            <summary>
+            Obtém a lista de todos os registros por data previsao de entrega (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por previsao de entrega (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.Cadastrar(ViaVarejo.AppService.ViewModels.Inclusao.PedidoInclusaoVM,System.Int32)">
+            <summary>
+            Cadastrar Novo Registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Cadastrar novo registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.Atualizar(ViaVarejo.AppService.ViewModels.Alteracao.PedidoAlteracaoVM,System.Int32)">
+            <summary>
+            Atualizar o Pedido
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Atualizar o registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.PedidoController.Remover(System.Int32)">
+            <summary>
+            Remover o registro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViaVarejo.Api.Controllers.ProdutoController">
+            <summary>
+            API Produtos
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.#ctor(ViaVarejo.AppService.Interfaces.IProdutoAppService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="iAppService"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.ObterPorId(System.Int32)">
+            <summary>
+            Obtém informações do produto
+            </summary>
+            <param name="idProduto">Código</param>
+            <returns>Informações do registro selecionado</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.ObterTodos">
+            <summary>
+            Obtém a lista de todos registros
+            </summary>
+            <returns>Retorna a lista de todos registros</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.ObterPorTexto(System.String)">
+            <summary>
+            Obtém a lista de todos os registros por texto (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros por texto (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.Cadastrar(ViaVarejo.AppService.ViewModels.Inclusao.ProdutoInclusaoVM,System.Int32)">
+            <summary>
+            Cadastrar Novo Registro
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Cadastrar novo registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.Atualizar(ViaVarejo.AppService.ViewModels.Alteracao.ProdutoAlteracaoVM,System.Int32)">
+            <summary>
+            Atualizar o produto
+            </summary>
+            <param name="vm"></param>
+            <param name="idUsuario"></param>
+            <returns>Atualizar o registro</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.ProdutoController.Remover(System.Int32)">
+            <summary>
+            Remover o registro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViaVarejo.Api.Controllers.StatusPedidoController">
+            <summary>
+            API Status Pedido
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.#ctor(ViaVarejo.AppService.Interfaces.IStatusPedidoAppService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="iStatusPedidoAppServico"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.ObterPorId(System.Int32)">
+            <summary>
+            Obtém informações dos status de pedido
+            </summary>
+            <param name="idUsuario">Código do Tipo de Suspensão de Usuário</param>
+            <returns>Informações do usuário</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.ObterTodos">
+            <summary>
+            Obtém a lista de todos status de pedido
+            </summary>
+            <returns>Retorna a lista de todos os usuários</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.ObterPorTexto(System.String)">
+            <summary>
+            Obtém a lista de todos os status de pedido por texto (busca)
+            </summary>
+            <returns>Retorna a lista de todos os usuários por texto (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.Cadastrar(ViaVarejo.AppService.ViewModels.Inclusao.StatusPedidoInclusaoVM,System.Int32)">
+            <summary>
+            Cadastrar Novo status de pedido
+            </summary>
+            <param name="statusPedido"></param>
+            <param name="idUsuario"></param>
+            <returns>Cadastrar novo usuário</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.Atualizar(ViaVarejo.AppService.ViewModels.Alteracao.StatusPedidoAlteracaoVM,System.Int32)">
+            <summary>
+            Atualizar o status de pedido
+            </summary>
+            <param name="idStatus"></param>
+            <param name="idUsuario"></param>
+            <returns>Atualizar o usuário</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.StatusPedidoController.Remover(System.Int32)">
+            <summary>
+            Remover o status de pedido
+            </summary>
+            <param name="idStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViaVarejo.Api.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="P:ViaVarejo.Api.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:ViaVarejo.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ViaVarejo.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+    </members>
+</doc>
