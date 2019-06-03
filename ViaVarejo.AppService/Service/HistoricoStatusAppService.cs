@@ -52,6 +52,9 @@ namespace ViaVarejo.AppService.Service
         public IEnumerable<HistoricoStatusConsultaVM> ObterTodos() =>
             MapperUtils.MapList<HistoricoStatus, HistoricoStatusConsultaVM>(_service.ObterTodos());
 
+        public IEnumerable<HistoricoStatusConsultaVM> ObterTodosAgrupados() =>
+            MapperUtils.MapList<HistoricoStatus, HistoricoStatusConsultaVM>(_service.ObterTodosAgrupados());
+
         public bool Remover(int id) =>
             _service.Remover(id);
     }

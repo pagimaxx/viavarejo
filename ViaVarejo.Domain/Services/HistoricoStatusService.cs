@@ -55,6 +55,11 @@ namespace ViaVarejo.Domain.Services
         public IEnumerable<HistoricoStatus> ObterTodos() =>
             _repository.ObterTodos();
 
+        public IEnumerable<HistoricoStatus> ObterTodosAgrupados()
+        {
+            return _repository.ObterTodosAgrupados();
+        }
+
         public bool Remover(int id)
         {
             using (var scope = new TransactionScope())

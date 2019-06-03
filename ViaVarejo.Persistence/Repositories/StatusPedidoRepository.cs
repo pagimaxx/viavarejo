@@ -81,7 +81,7 @@ namespace ViaVarejo.Persistence.Repositories
         {
             try
             {
-                const string query = @"SELECT * FROM StatusPedido WHERE IdStatus = :idStatus ORDER BY Nome";
+                const string query = @"SELECT * FROM StatusPedido WHERE IdStatus = :idStatus ORDER BY Ordem";
                 return IDbConn.CommandQuery<StatusPedido>(query, DataBaseType, new { idStatus }).FirstOrDefault();
             }
             catch (Exception ex)
@@ -94,7 +94,7 @@ namespace ViaVarejo.Persistence.Repositories
         {
             try
             {
-                const string query = @"SELECT * FROM StatusPedido WHERE Nome LIKE :nome ORDER BY Nome";
+                const string query = @"SELECT * FROM StatusPedido WHERE Nome LIKE :nome ORDER BY Ordem";
                 var parametro = new { nome = "%" + nome + "%" };
                 return IDbConn.CommandQuery<StatusPedido>(query, DataBaseType, parametro).ToList();
             }
@@ -108,7 +108,7 @@ namespace ViaVarejo.Persistence.Repositories
         {
             try
             {
-                const string query = @"SELECT * FROM StatusPedido ORDER BY Nome";
+                const string query = @"SELECT * FROM StatusPedido ORDER BY Ordem";
                 return IDbConn.CommandQuery<StatusPedido>(query, DataBaseType).ToList();
             }
             catch (Exception ex)

@@ -9,6 +9,7 @@ namespace ViaVarejo.AppService.Interfaces
     public interface IHistoricoStatusAppService
     {
         IEnumerable<HistoricoStatusConsultaVM> ObterTodos();
+        IEnumerable<HistoricoStatusConsultaVM> ObterTodosAgrupados();
         IEnumerable<HistoricoStatusConsultaVM> ObterPorIdPedido(int id);
         IEnumerable<HistoricoStatusConsultaVM> ObterPorIdStatus(int id);
         IEnumerable<HistoricoStatusConsultaVM> ObterPorDataStatus(DateTime dtInicial, DateTime dtFinal);

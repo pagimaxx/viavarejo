@@ -132,6 +132,26 @@ namespace ViaVarejo.Persistence.Repositories
                 DataBaseType, splitOn: "IdStatus").ToList();
         }
 
+        public IEnumerable<HistoricoStatus> ObterTodosAgrupados()
+        {
+            //const string query = @"EXEC ConsultarHistoricoPedidosAgrupados";
+            const string query = @"
+                SELECT hs.IdPedido, MAX(hs.IdStatus) AS IdStatus, MAX(hs.DataStatus) AS DataStatus,
+		  (SELECT Nome FROM StatusPedido sp WHERE sp.IdStatus = MAX(hs.IdStatus)) AS Nome
+
+      FROM HistoricoStatus hs(NOLOCK)
+GROUP BY hs.IdPedido";
+            var res = IDbConn.CommandQuery<HistoricoStatus, StatusPedido, HistoricoStatus>(query,
+                (historico, status) => {
+                    historico.IdStatus = status.IdStatus;
+                    historico.StatusPedido = status;
+                    return historico;
+                },
+                DataBaseType, splitOn: "IdStatus").ToList();
+
+            return res;
+        }
+
         public bool Remover(int id)
         {
             try

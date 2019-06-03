@@ -7,6 +7,7 @@ namespace ViaVarejo.AppService.ViewModels.Consulta
     {
         public int IdPedido { get; set; }
         public int IdStatus { get; set; }
+        public string StatusAtual { get; set; }
         public DateTime DataStatus { get; set; }
         public StatusPedido StatusPedido { get; set; }
         public Pedido Pedido { get; set; }

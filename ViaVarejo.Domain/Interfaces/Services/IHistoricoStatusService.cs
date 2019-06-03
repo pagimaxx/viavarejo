@@ -7,6 +7,7 @@ namespace ViaVarejo.Domain.Interfaces.Services
     public interface IHistoricoStatusService
     {
         IEnumerable<HistoricoStatus> ObterTodos();
+        IEnumerable<HistoricoStatus> ObterTodosAgrupados();
         IEnumerable<HistoricoStatus> ObterPorIdPedido(int id);
         IEnumerable<HistoricoStatus> ObterPorIdStatus(int id);
         IEnumerable<HistoricoStatus> ObterPorDataStatus(DateTime dtInicial, DateTime dtFinal);

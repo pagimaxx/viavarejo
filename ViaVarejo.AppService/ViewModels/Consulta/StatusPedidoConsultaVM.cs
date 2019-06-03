@@ -17,5 +17,15 @@ namespace ViaVarejo.AppService.ViewModels.Consulta
         /// Ordem
         /// </summary>
         public int Ordem { get; set; }
+
+        /// <summary>
+        /// Data Status
+        /// </summary>
+        public string DataStatus { get; set; }
+
+        /// <summary>
+        /// Status atual
+        /// </summary>
+        public string StatusAtual { get; set; }
     }
 }

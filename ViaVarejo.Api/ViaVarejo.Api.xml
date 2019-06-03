@@ -9,7 +9,7 @@
             API Pedidos
             </summary>
         </member>
-        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.#ctor(ViaVarejo.AppService.Interfaces.IHistoricoStatusAppService)">
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.#ctor(ViaVarejo.AppService.Interfaces.IHistoricoStatusAppService,ViaVarejo.AppService.Interfaces.IStatusPedidoAppService)">
             <summary>
             Construtor
             </summary>
@@ -21,7 +21,19 @@
             </summary>
             <returns>Retorna a lista de todos registros</returns>
         </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterTodosAgrupados">
+            <summary>
+            Obtém a lista de todos registros agrupados
+            </summary>
+            <returns>Retorna a lista de todos registros</returns>
+        </member>
         <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterPorIdPedido(System.Int32)">
+            <summary>
+            Obtém a lista de todos os registros por pedidos (busca)
+            </summary>
+            <returns>Retorna a lista de todos os registros pedido (busca)</returns>
+        </member>
+        <member name="M:ViaVarejo.Api.Controllers.HistoricoStatusController.ObterPorStatusPedido(System.Int32)">
             <summary>
             Obtém a lista de todos os registros por pedidos (busca)
             </summary>

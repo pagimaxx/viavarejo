@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViaVarejo.Persistence", "Vi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViaVarejo.Api", "ViaVarejo.Api\ViaVarejo.Api.csproj", "{EF7E0958-FF09-4246-BA47-9E56365443D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViaVarejo.Hangfire", "ViaVarejo.Hangfire\ViaVarejo.Hangfire.csproj", "{33766005-6B53-46D8-AF46-CE4EF6F1DE61}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{EF7E0958-FF09-4246-BA47-9E56365443D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF7E0958-FF09-4246-BA47-9E56365443D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF7E0958-FF09-4246-BA47-9E56365443D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33766005-6B53-46D8-AF46-CE4EF6F1DE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33766005-6B53-46D8-AF46-CE4EF6F1DE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33766005-6B53-46D8-AF46-CE4EF6F1DE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33766005-6B53-46D8-AF46-CE4EF6F1DE61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
